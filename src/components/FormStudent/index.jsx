@@ -24,11 +24,14 @@ function FormInput(props) {
         e.preventDefault();
         const newstudent={
             id:student.id,
-            name:student.name}
+            name:student.name,
+            email:'12@gmail.com'
+        }
         if(!onSubmit){
             return;
         }
         onSubmit(newstudent);
+        setstudent({id:' ',name:' '});
     }
     return (
        

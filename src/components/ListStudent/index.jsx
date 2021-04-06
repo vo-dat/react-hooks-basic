@@ -13,7 +13,7 @@ function ListStudent(props) {
     return (
             
            <div className="container">
-               <h1>List Student</h1>
+             
 
                <table className="table table-bordered">
                     <thead>

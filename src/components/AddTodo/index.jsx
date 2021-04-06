@@ -21,6 +21,11 @@ function handelSubmitForm(e){{
     const formValue={
         title: value,
     }
+    if(!onSubmit){
+        console.log('Errol');
+        return;
+    }
+    console.log('Pass');
     onSubmit(formValue);
     setvalue('');
 }}

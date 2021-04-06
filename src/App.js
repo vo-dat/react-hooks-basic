@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.scss';
-import TodoForm from './components/AddTodo/AddTodo';
-import AddTodo from './components/AddTodo/index';
+import AddTodo from './components/AddTodo/AddTodo';
+import TodoForm from './components/AddTodo/index';
 // import ColorBox from './components/ColorBox/ColorBox'
 import TodoList from './components/TodoList/index'
 import FormInput from './components/FormStudent';
@@ -30,7 +30,7 @@ function App() {
     const newtodoList=[... todoList];
     newtodoList.splice(index,1);
     setTodoList(newtodoList);
-  }
+  };
 
   function handelSubmitForm(formValue){
     console.log(formValue);
@@ -41,20 +41,20 @@ function App() {
     }
     newTodoForm.push(newtodo);
     setTodoList(newTodoForm);
-  }
+  };
     function handelOnSubmit(formValue){
           const newValue={ ... formValue};
           const newTodoList=[... todoList];
           newTodoList.push(newValue);
           setTodoList(newTodoList);
-    }
+    };
     function handelOnSubmitStudent(formStudent){
       const newListSudent= [... student];
       const newValue={... formStudent};
       newListSudent.push(newValue);
       console.log(newValue);
       setstudent(newListSudent);
-    }
+    };
   return (
     <div className="App">
       <h1>Wellcome ReactJs Hook</h1>
@@ -63,7 +63,9 @@ function App() {
           <TodoForm onSubmit={handelSubmitForm}/>
       <h1>Tự Làm</h1>
           <AddTodo clickSubmit={handelOnSubmit}/>
-      <h1>Form Student</h1>
+         
+      <h1>----------------------------------------------</h1>
+      <h1>List Student</h1>
           <FormInput onSubmit={handelOnSubmitStudent}/>
           <br/>
           <ListStudent students={student}/>
